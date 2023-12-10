@@ -18,7 +18,10 @@ canvas {
 
 @media (min-width: 600px) {
   :root {
-    font-size: 400;
+    font-weight: 400;
+  } 
+  header {
+      font-size: 0.6rem;
   }
 }
 
