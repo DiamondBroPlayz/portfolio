@@ -67,12 +67,12 @@
     <script type="module" src="/main.js"></script>
     <script>
         var statusText = document.getElementById('statusText')
-        var apiUrl = 'https://status-api-f3ka.onrender.com/810226107248803881';
+        var apiUrl = 'https://api.lanyard.rest/v1/users/810226107248803881';
         fetch(apiUrl).then(response => {
           return response.json();
         }).then(data => {
           // No need to parse data again, as it's already parsed
-          statusText.innerHTML = `🚀 Welcome to my website! I'm currently ${data.presence}`;
+          statusText.innerHTML = `🚀 Welcome to my website! I'm currently ${data.data.discord_status}`;
           console.log(data);
         }).catch(err => {
           // Do something for an error here
